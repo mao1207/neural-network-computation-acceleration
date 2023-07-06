@@ -1,2 +1,27 @@
-# neural-network-computation-acceleration-
-Reproduce the fast matrix multiplication method based on *Multiplying Matrices Without Multiplying* and *Bolt: Accelerated Data Mining with Fast Vector Compression* , while doing the speedup of the underlying operator.
+#### 包环境：
+
+- keras
+- numpy
+- scipy
+
+### 文件说明：
+
+- mycifar10vgg/mycifar100vgg
+
+  论文中提到的实验用的两个vgg网络代码，我做了一些修改（原始代码可以在论文中给的github仓库下载）。使用与训练权重，权重文件在github下载即可使用。
+
+  代码目前运行的话是进行实验（我自己的实验），但是由于一些文件没有，所以不能运行（文件需要生成）。
+
+  需要先把实验代码注释，然后用下面的生成训练测试矩阵的代码，生成矩阵文件，之后就是使用另外两份代码了
+
+- pq_kmeans
+
+  论文中乘积量化方法的实现，使用上面说的生成的矩阵文件进行训练，会保存对应的训练结果，训练结果文件可以在上面说的实验中使用，也就是上面说没有的那些文件。
+
+- forest
+
+  论文中哈希方法的实现，使用上面说的生成的矩阵文件进行训练，会保存对应的训练结果，训练结果文件可以在上面说的实验中使用，也就是上面说没有的那些文件。
+
+### vgg网络的githb仓库
+
+https://github.com/geifmany/cifar-vgg
